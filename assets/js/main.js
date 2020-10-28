@@ -20,6 +20,7 @@
 			xxsmall:   [null,       '360px'    ]
 		});
 
+	
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
@@ -40,6 +41,8 @@
 			.scrolly({
 				offset: 100
 			});
+	
+	
 
 	// Polyfill: Object fit.
 		if (!browser.canUse('object-fit')) {
