@@ -1585,7 +1585,12 @@ input, select, textarea {
 				flex-wrap: wrap;
 				box-sizing: border-box;
 				align-items: stretch;
+			
 			}
+			
+	
+
+			
 
 				.row > * {
 					box-sizing: border-box;
@@ -3359,7 +3364,7 @@ input, select, textarea {
 					}
 
 				#wrapper > section.intro > .content {
-					height: 100vh;
+					height: 55vh;
 					max-width: none;
 				}
 
@@ -3877,3 +3882,17 @@ input, select, textarea {
 		}
 
 	}
+
+.visible-mobile {
+  display: none !important;
+}
+
+@media (max-width: 489px) {
+  .visible-mobile {
+    display: inline !important;
+  }
+
+  .hidden-mobile {
+    display: none !important;
+  }
+}
