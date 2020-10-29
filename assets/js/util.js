@@ -77,8 +77,7 @@
 				// Hide panel on swipe.
 					hideOnSwipe: false,
 
-				// Reset scroll position on hide.
-					resetScroll: false,
+			
 
 				// Reset forms on hide.
 					resetForms: false,
@@ -121,10 +120,7 @@
 					// Post-hide stuff.
 						window.setTimeout(function() {
 
-							// Reset scroll position.
-								if (config.resetScroll)
-									$this.scrollTop(0);
-
+							
 							// Reset forms.
 								if (config.resetForms)
 									$this.find('form').each(function() {
@@ -134,11 +130,6 @@
 						}, config.delay);
 
 				};
-
-			// Vendor fixes.
-				$this
-					.css('-ms-overflow-style', '-ms-autohiding-scrollbar')
-					.css('-webkit-overflow-scrolling', 'touch');
 
 			// Hide on click.
 				if (config.hideOnClick) {
@@ -185,16 +176,6 @@
 
 				})
 
-				$this.on('touchmove', function(event) {
-
-					if ($this.touchPosX === null
-					||	$this.touchPosY === null)
-						return;
-
-					var	diffX = $this.touchPosX - event.originalEvent.touches[0].pageX,
-						diffY = $this.touchPosY - event.originalEvent.touches[0].pageY,
-						th = $this.outerHeight(),
-						ts = ($this.get(0).scrollHeight - $this.scrollTop());
 
 					// Hide on swipe?
 						if (config.hideOnSwipe) {

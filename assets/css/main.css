@@ -3897,3 +3897,7 @@ input, select, textarea {
     display: none !important;
   }
 }
+
+html {
+  overflow-x: initial !important;
+}
