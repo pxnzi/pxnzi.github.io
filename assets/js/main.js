@@ -21,28 +21,7 @@
 		});
 
 	
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
 
-	// Hack: Enable IE workarounds.
-		if (browser.name == 'ie')
-			$body.addClass('is-ie');
-
-	// Mobile?
-		if (browser.mobile)
-			$body.addClass('is-mobile');
-
-	// Scrolly.
-		$('.scrolly')
-			.scrolly({
-				offset: 100
-			});
-	
-	
 
 	// Polyfill: Object fit.
 		if (!browser.canUse('object-fit')) {
